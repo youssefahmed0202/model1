@@ -1,0 +1,31 @@
+:root {
+    --sage-green: #8FB090;
+    --cream-bg: #FDFCF0;
+}
+
+body { background-color: var(--cream-bg); font-family: 'Montserrat', sans-serif; }
+
+.navbar-custom { background-color: var(--sage-green); }
+
+.logo-box {
+    background-color: #f1c9d2;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-sage {
+    background-color: var(--sage-green);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-sage:hover {
+    background-color: #7a997b;
+    color: white;
+}
+
+.card { transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-10px); }

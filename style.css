@@ -1,0 +1,85 @@
+:root {
+    --sage-green: #86A788;
+    --cream-yellow: #FFFDEC;
+    --soft-peach: #FFE2E2;
+    --dusty-pink: #FFCFCF;
+}
+
+body {
+    background-color: var(--cream-yellow);
+    color: #333;
+}
+
+.custom-navbar {
+    background: rgba(134, 167, 136, 0.9); 
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--dusty-pink);
+    padding: 12px 0;
+}
+
+.logo-icon {
+    background: var(--dusty-pink);
+    color: var(--sage-green);
+    font-weight: bold;
+    padding: 2px 12px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--soft-peach) !important;
+}
+
+.card {
+    border: none;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(134, 167, 136, 0.2);
+}
+
+.card-body {
+    background-color: white;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--sage-green);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #6b8a6d; 
+    transform: scale(1.05);
+}
+
+.btn-outline-light {
+    border-color: var(--soft-peach);
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--soft-peach);
+    color: var(--sage-green);
+}

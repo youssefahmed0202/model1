@@ -1,0 +1,55 @@
+:root {
+    --sage-green: #8FB090;
+    --cream-bg: #FDFCF0;
+}
+
+body {
+    background-color: var(--cream-bg);
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+/* Header */
+.navbar-custom { background-color: var(--sage-green); }
+.logo-box {
+    background-color: #f1c9d2;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Carousel Customization */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--sage-green);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Makes dots circular */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100) brightness(0.5); /* Makes white arrows darker/visible on light bg */
+}
+
+/* Typography & Buttons */
+.ls-2 { letter-spacing: 2px; }
+.price-tag { color: var(--sage-green); font-weight: 600; }
+.description { line-height: 1.8; font-weight: 300; }
+
+.btn-sage {
+    background-color: var(--sage-green);
+    border-color: var(--sage-green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-sage:hover {
+    background-color: #7a997b;
+    border-color: #7a997b;
+    color: white;
+}

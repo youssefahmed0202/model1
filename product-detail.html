@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Nice | Product Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage-green: #8FB090;
+            --bg-cream: #FDFCF0;
+            --text-dark: #333;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Style */
+        .custom-navbar {
+            background-color: var(--sage-green);
+            padding: 10px 0;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        /* Main Container */
+        .product-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 60px);
+            padding: 20px;
+        }
+
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Image Side */
+        .image-wrapper {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Content Side */
+        .content-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .in-stock {
+            color: var(--sage-green);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: var(--sage-green);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 40px;
+            white-space: pre-line; /* يحافظ على الفواصل بين الأسطر */
+        }
+
+        /* Buttons Style */
+        .btn-whatsapp {
+            background-color: var(--sage-green);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            opacity: 0.9;
+            color: white;
+        }
+
+        .btn-contact {
+            background-color: transparent;
+            border: 1px solid var(--text-dark);
+            color: var(--text-dark);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #eee;
+            color: black;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product-layout {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .image-wrapper img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="custom-navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="index.html">N Be Nice</a>
+            <div>
+                <a href="index.html" class="nav-link d-inline-block me-3">Home</a>
+                <a href="#" class="nav-link d-inline-block">Shop</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <div class="product-layout">
+            <div class="image-wrapper">
+                <img id="pImg" src="" alt="Product">
+            </div>
+
+            <div class="content-side">
+                <div class="in-stock">IN STOCK NOW</div>
+                <h1 id="pName" class="product-title">Loading...</h1>
+                <div class="product-price"><span id="pPrice">0</span>EGP</div>
+                
+                <div id="pDesc" class="product-description">
+                    </div>
+
+                <a id="waLink" href="#" target="_blank" class="btn-whatsapp">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    ORDER VIA WHATSAPP
+                </a>
+
+                <a href="https://wa.me/201558189590" class="btn-contact">
+                    📞 contact this number in whatsapp 01558189590
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // جلب بيانات المنتج من الذاكرة
+            const product = JSON.parse(localStorage.getItem('selectedProduct'));
+
+            if (product) {
+                document.getElementById('pName').innerText = product.name;
+                document.getElementById('pPrice').innerText = product.price;
+                document.getElementById('pImg').src = product.img;
+                document.getElementById('pDesc').innerText = product.desc || "No description provided.";
+
+                // تحديث رابط الواتساب
+                const phoneNumber = "201558189590";
+                const message = `Hello Be Nice! I want to order:\nProduct: ${product.name}\nPrice: ${product.price} EGP`;
+                document.getElementById('waLink').href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            } else {
+                window.location.href = 'index.html';
+            }
+        };
+    </script>
+</body>
+</html>
